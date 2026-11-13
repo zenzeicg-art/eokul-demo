@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>e-Okul Demo - Giriş</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-banner">
+    ⚠️ Bu bir <strong>demo / eğitim amaçlı</strong> sayfadır. Resmî e-Okul sitesi değildir
+    ve hiçbir veri gönderilmez, kaydedilmez.
+  </div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="logo-area">
+        <div class="logo-circle">
+          <span class="logo-book">📖</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">e-Okul</span>
+          <span class="logo-sub">Demo Yönetim Bilgi Sistemi</span>
+        </div>
+      </div>
+      <nav class="top-links">
+        <a href="#">Ana Sayfa</a>
+        <a href="#">Yardım</a>
+        <a href="#">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="subbar">
+    <div class="subbar-inner">
+      <span>Millî Eğitim Bakanlığı &rsaquo; e-Okul Demo</span>
+      <span id="clock">--:--:--</span>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <section class="announcements">
+      <h2 class="ann-title">📢 Duyurular</h2>
+      <ul>
+        <li>
+          <span class="ann-date">12.05.2025</span>
+          Karne işlemleri hakkında duyuru — demo metin, yalnızca tasarım amaçlıdır.
+        </li>
+        <li>
+          <span class="ann-date">05.05.2025</span>
+          Sistem bakımı 15 Mayıs 02:00 - 04:00 arası yapılacaktır (demo).
+        </li>
+        <li>
+          <span class="ann-date">28.04.2025</span>
+          Şifrenizi unuttuğunuzda "Şifremi Unuttum" bağlantısını kullanabilirsiniz.
+        </li>
+      </ul>
+    </section>
+
+    <section class="login-panel">
+      <div class="tabs">
+        <button class="tab active" data-tab="veli">Veli</button>
+        <button class="tab" data-tab="ogretmen">Yönetici / Öğretmen</button>
+      </div>
+
+      <div class="login-box">
+        <h1 class="login-title">Giriş Yapın</h1>
+
+        <form id="loginForm" autocomplete="off">
+          <label for="tcno">T.C. Kimlik No</label>
+          <div class="input-wrap">
+            <span class="input-icon">👤</span>
+            <input
+              type="text"
+              id="tcno"
+              name="tcno"
+              maxlength="11"
+              inputmode="numeric"
+              placeholder="T.C. Kimlik Numaranız"
+            />
+          </div>
+
+          <label for="sifre">Şifre</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input
+              type="password"
+              id="sifre"
+              name="sifre"
+              placeholder="Şifreniz"
+            />
+            <button type="button" class="eye" id="togglePass" aria-label="Şifreyi göster">👁</button>
+          </div>
+
+          <label for="kontrol">Kontrol Kodu</label>
+          <div class="captcha-row">
+            <div class="captcha-img" id="captchaImg">4 7 2 9</div>
+            <button type="button" class="refresh" id="refreshCaptcha" aria-label="Kodu yenile">🔄</button>
+            <div class="input-wrap captcha-input">
+              <input
+                type="text"
+                id="kontrol"
+                name="kontrol"
+                maxlength="4"
+                placeholder="Kodu girin"
+              />
+            </div>
+          </div>
+
+          <div class="options-row">
+            <label class="remember">
+              <input type="checkbox" id="beniHatirla" />
+              Beni hatırla
+            </label>
+            <a href="#" class="forgot">Şifremi Unuttum</a>
+          </div>
+
+          <button type="submit" class="btn-login">GİRİŞ</button>
+          <button type="button" class="btn-clear">TEMİZLE</button>
+
+          <p class="form-msg" id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>
+        Bu sayfa <strong>eğitim amaçlı bir tasarımdır</strong>. Resmî e-Okul uygulaması
+        <a href="https://eokul.meb.gov.tr" target="_blank" rel="noopener">eokul.meb.gov.tr</a>
+        adresindedir.
+      </p>
+      <p class="copyright">© 2025 e-Okul Demo — Tüm hakları serbestçe kullanılabilir (öğrenme projesi).</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
